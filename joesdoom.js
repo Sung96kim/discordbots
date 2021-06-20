@@ -30,17 +30,17 @@ bot.on("message", async message => {
   //   );
   // }
 
-  // if (message.content === "!help"){
-  //   channel.send(
-  //     "What do you want loser, go away"
-  //   );
-  // }
+  if (message.content === "!help"){
+    channel.send(
+      "What do you want loser, go away"
+    );
+  }
 
-  // if (message.content === "!plshelpme"){
-  //   channel.send(
-  //     "Okay fine. Here's the list of commands: "
-  //   );
-  // }
+  if (message.content === "!plshelpme"){
+    channel.send(
+      "Okay fine. Here's the list of commands: ", "You can ping everyone in the server by just normally typing: 'ping carrie' | 'ping joe' | 'ping jn' | 'ping gil' | 'ping boyun' | 'ping ooby' | 'ping sung' "
+    );
+  }
 
   // if (message.content.includes("boyun") || message.content.includes("Boyun") || message.content.includes("Hoyun") || message.content.includes("hoyun")){
   //   channel.send(
@@ -98,12 +98,14 @@ bot.on("message", async message => {
   }
 
   //Make counter for how many times an emoji is used
-  // if(message.content.includes)
+  if(message.content.includes()){
+
+  }
 
   //React to every message Joe sends
-  // if(message.author.id === '124697759377784832'){
-  //   message.react('848061721297027093');
-  // }
+  if(message.author.id === '124697759377784832'){
+    message.react('848061721297027093');
+  }
 
 
 });
