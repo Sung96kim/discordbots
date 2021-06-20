@@ -1,22 +1,23 @@
-const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
-const ytdl = require("ytdl-core");
+require('dotenv').config();
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
-const client = new Discord.Client();
+const TOKEN = process.env.TOKEN;
 
-const queue = new Map();
+bot.login(TOKEN);
 
-client.once("ready", () => {
+bot.once("ready", () => {
   console.log("Ready!");
 });
 
-client.once("reconnecting", () => {
+bot.once("reconnecting", () => {
   console.log("Reconnecting!");
 });
 
-client.once("disconnect", () => {
+bot.once("disconnect", () => {
   console.log("Disconnect!");
 });
+
 
 client.on("message", async message => {
   if (message.author.bot) return;
@@ -126,4 +127,4 @@ function play(guild, song) {
   serverQueue.textChannel.send(`Start playing: **${song.title}**`);
 }
 
-client.login(token);
+bot.login(TOKEN);
